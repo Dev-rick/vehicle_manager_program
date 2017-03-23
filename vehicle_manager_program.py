@@ -76,7 +76,13 @@ def get_everything(list_of_vehicles):
 def add_vehicle(list_of_vehicles):
     brand = raw_input("\nBrand:\n>> ")
     model = raw_input("Model:\n>> ")
-    km_done_so_far = raw_input("Km done so far:\n>> ")
+    while True:
+        try:
+            km_done_so_far = int(raw_input("Km done so far:\n>> "))
+            break
+        except ValueError:
+            print "Oops enter a number!"
+            continue
     gen_service_date = raw_input("General service date:\n>> ")
     new = Vehicle(brand, model, km_done_so_far, gen_service_date)
     list_of_vehicles.append(new)
@@ -100,7 +106,7 @@ def delete_vehicle(list_of_vehicles):
 def main():
 
 
-    example = Vehicle("Toyota","CHR", "234", "2013")
+    example = Vehicle("Toyota","CHR", 234, "2013")
 
     list_of_vehicles = [example]
 
