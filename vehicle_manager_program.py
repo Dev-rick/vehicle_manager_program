@@ -3,8 +3,6 @@
 books to keep track of them, but now they'd like to have a computer program to do this.
 
 Each vehicle has these attributes:
-class:
-__init__
     brand
     model
     kilometers done so far
@@ -109,7 +107,7 @@ def main():
     print "Welcome to your vehicle manage program!"
     while True:
         choice = raw_input("\nWhat do you want to do?\n"
-                          "a) See list of vehicle already registered\n"
+                          "a) See a list of vehicles already registered\n"
                           "b) Register a vehicle\n"
                           "c) Edit a vehicle and recieve your list as list_of_vehicles.txt\n"
                           "d) Delete a registered vehicle\n"
